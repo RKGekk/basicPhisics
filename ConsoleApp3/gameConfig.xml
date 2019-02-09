@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WindowConfig xmlns="https://geekbrains.ru/CSL3/2018/05/02/1300/GameConfig/Entities" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <windowConfig xmlns:a="https://geekbrains.ru/CSL3/2018/05/02/1300/GameConfig/WindowConfig/Entities">
+    <a:screenWidth>800</a:screenWidth>
+    <a:screenHeight>600</a:screenHeight>
+    <a:mainWndCaption>Particle Chaos</a:mainWndCaption>
+  </windowConfig>
+</WindowConfig>

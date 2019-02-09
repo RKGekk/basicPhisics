@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7716E8FC-47F1-4E6B-87FC-77B4BFF88353}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp3</RootNamespace>
+    <AssemblyName>ConsoleApp3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModels\GameConfig.cs" />
+    <Compile Include="DataModels\WindowConfig.cs" />
+    <Compile Include="Engine\Camera.cs" />
+    <Compile Include="Engine\GameApplication.cs" />
+    <Compile Include="Engine\GameTimer.cs" />
+    <Compile Include="Engine\GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\IGameDataFormatter.cs" />
+    <Compile Include="Engine\XMLGameDataFormatter.cs" />
+    <Compile Include="MathPrim\Color8.cs" />
+    <Compile Include="MathPrim\Complex.cs" />
+    <Compile Include="MathPrim\Mat4.cs" />
+    <Compile Include="MathPrim\Quat.cs" />
+    <Compile Include="MathPrim\Vec2.cs" />
+    <Compile Include="MathPrim\Vec3.cs" />
+    <Compile Include="MathPrim\Vec4.cs" />
+    <Compile Include="MS3D\Edge.cs" />
+    <Compile Include="MS3D\Group.cs" />
+    <Compile Include="MS3D\Header.cs" />
+    <Compile Include="MS3D\Joint.cs" />
+    <Compile Include="MS3D\KeyframePosition.cs" />
+    <Compile Include="MS3D\KeyframeRotation.cs" />
+    <Compile Include="MS3D\Material.cs" />
+    <Compile Include="MS3D\MilkShapeObject.cs" />
+    <Compile Include="MS3D\Triangle.cs" />
+    <Compile Include="MS3D\Vertex.cs" />
+    <Compile Include="Phis\GroundContact.cs" />
+    <Compile Include="Phis\IParticleContactGenerator.cs" />
+    <Compile Include="Phis\IParticleForceGenerator.cs" />
+    <Compile Include="Phis\Particle.cs" />
+    <Compile Include="Phis\ParticleBungee.cs" />
+    <Compile Include="Phis\ParticleCable.cs" />
+    <Compile Include="Phis\ParticleCableConstraint.cs" />
+    <Compile Include="Phis\ParticleConstraint.cs" />
+    <Compile Include="Phis\ParticleContact.cs" />
+    <Compile Include="Phis\ParticleContactResolver.cs" />
+    <Compile Include="Phis\ParticleFakeSpring.cs" />
+    <Compile Include="Phis\ParticleForceRegistry.cs" />
+    <Compile Include="Phis\ParticleGarvity.cs" />
+    <Compile Include="Phis\ParticleLink.cs" />
+    <Compile Include="Phis\ParticleRespawn.cs" />
+    <Compile Include="Phis\ParticleRod.cs" />
+    <Compile Include="Phis\ParticleWind.cs" />
+    <Compile Include="Phis\ParticleWorld.cs" />
+    <Compile Include="Phis\SphereContact.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gameConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
